@@ -1,0 +1,86 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e8e8;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper .input {
+  height: 45px;
+  padding: 25px;
+  font-size: 17px;
+  background: none;
+  outline: none;
+  border: 2px solid #0b2447;
+  border-top: 0;
+  border-bottom: 0;
+  box-shadow: 10px 10px 0 0 #0b2447;
+  transition: 0.5s;
+}
+
+.wrapper .label {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  color: #0b2447;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.wrapper .top-line {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #0b2447;
+  right: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+.wrapper .bottom-line {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #0b2447;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.wrapper .input:focus,
+.wrapper .input:valid {
+  box-shadow: none;
+}
+
+.wrapper .input:focus ~ .label,
+.wrapper .input:valid ~ .label {
+  font-size: 15px;
+  top: -11px;
+}
+
+.wrapper .input:focus ~ .top-line,
+.wrapper .input:valid ~ .top-line {
+  width: 40%;
+}
+
+.wrapper .input:focus ~ .bottom-line,
+.wrapper .input:valid ~ .bottom-line {
+  width: 100%;
+}
